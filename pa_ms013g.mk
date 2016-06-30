@@ -1,4 +1,4 @@
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2016 ParanoidAndroid Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,8 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit some common Bliss stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Check for target product
+ifeq (pa_ms013g,$(TARGET_PRODUCT))
+
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Include ParanoidAndroid common configuration
+include vendor/pa/main.mk
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/ms013g/full_ms013g.mk)
@@ -21,7 +27,7 @@ $(call inherit-product, device/samsung/ms013g/full_ms013g.mk)
 # Release name
 PRODUCT_RELEASE_NAME := SM-G7102
 PRODUCT_DEVICE := ms013g
-PRODUCT_NAME := cm_ms013g
+PRODUCT_NAME := pa_ms013g
 
 # Product property
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=ms013gxx TARGET_DEVICE=ms013g BUILD_FINGERPRINT="samsung/ms013gxx/ms013g:4.4.2/KOT49H/G7102XXUBOB1:user/release-keys" PRIVATE_BUILD_DESC="ms013gxx-user 4.4.2 KOT49H G7102XXUBOB1 release-keys"

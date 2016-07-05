@@ -19,7 +19,7 @@ ifeq (pa_ms013g,$(TARGET_PRODUCT))
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Include ParanoidAndroid common configuration
-TARGET_BOOT_ANIMATION_RES := 1080 
+TARGET_BOOT_ANIMATION_RES := 720 
 include vendor/pa/main.mk
 
 # Inherit from ms013g device

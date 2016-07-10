@@ -25,6 +25,10 @@ include vendor/pa/main.mk
 # Inherit from ms013g device
 $(call inherit-product, device/samsung/ms013g/device.mk)
 
+# Prebuilts
+PRODUCT_COPY_FILES += \
+    device/samsung/ms013g/prebuilts/kernel:kernel
+
 # Release name
 PRODUCT_RELEASE_NAME := SM-G7102
 PRODUCT_DEVICE := ms013g

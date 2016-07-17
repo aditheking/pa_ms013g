@@ -7,7 +7,7 @@ AOSPA MS013G
 | CHIPSET | Qualcomm Snapdragon 400 |
 | GPU     | Adreno 305 |
 | Memory  | 1.5GB RAM |
-| Shipped Android Version | 4.3.4.4.2,4.4.4,5.1.1 and 6.0.1 |
+| Shipped Android Version | 4.3(4.4.2) |
 | Storage | 8GB |
 | MicroSD | Up to 64GB |
 | Battery | 2100 mAh |
